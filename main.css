@@ -224,4 +224,144 @@ section {
 
 /* スマホ対応 */
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+  /* 全体：余白を少し詰める */
+  section {
+    padding: 3.5rem 1rem;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  /* ナビ：詰めて折り返し許可（スマホで潰れにくく） */
+  #nav {
+    position: fixed;          /* スクロールでも使いやすく */
+    top: 0;
+    left: 0;
+    height: auto;
+    padding: .6rem .75rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(
+      rgba(5,5,10,0.95) 0%,
+      rgba(5,5,10,0.65) 60%,
+      rgba(5,5,10,0) 100%
+    );
+  }
+
+  #nav a {
+    font-size: .95rem;
+    letter-spacing: .06rem;
+  }
+
+  /* fixedナビ分だけ、最初の見え方を調整 */
+  body {
+    padding-top: 3rem;
+  }
+
+  /* TOP：高さを縮める */
+  #top {
+    height: 24rem;
+  }
+
+  /* ヘッダー：3カラム → 縦積み */
+  #header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+    height: 24rem;
+    row-gap: 1rem;
+    padding: 1.5rem 1rem 0;
+  }
+
+  #header img {
+    grid-column: 1;
+    height: 9.5rem;
+  }
+
+  /* キャッチ：縦書き → 横書き＆中央寄せ */
+  #catch-copy {
+    grid-column: 1;
+    writing-mode: horizontal-tb;
+    margin-top: 0;
+    padding-right: 0;
+    text-align: center;
+    font-size: 1.05rem;
+    letter-spacing: .25rem;
+    line-height: 1.8;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+  }
+
+  #catch-copy span {
+    display: inline;
+    margin-top: 0;
+  }
+
+  /* 見出し：少し小さく */
+  .part h2 {
+    font-size: 2rem;
+    letter-spacing: .22rem;
+  }
+
+  /* STORY：行間と余白調整 */
+  #story-sentence {
+    margin-top: 2.2rem;
+    line-height: 2.2;
+    letter-spacing: .06rem;
+  }
+
+  /* CHARACTER：余白を詰める */
+  #chara-box {
+    gap: 2.2rem;
+  }
+
+  .chara-container {
+    padding-left: 1.25rem;
+  }
+
+  .chara-name {
+    font-size: 1.25rem;
+  }
+
+  .chara-name-en {
+    display: block;     /* 1行に詰め込まず折り返しやすく */
+    margin-left: 0;
+    margin-top: .25rem;
+    font-size: .95rem;
+  }
+
+  /* WORLD：横並び → 縦並び */
+  #world-box {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .world-name {
+    font-size: 1.25rem;
+  }
+
+  /* GALLERY：余白調整 */
+  #gallery-box {
+    margin-top: 2.2rem;
+  }
+
+  .gallery-cont img {
+    margin-bottom: 2.5rem;
+    border-radius: .35rem;
+  }
+
+  /* hoverはスマホだと誤発火しやすいので控えめに（任意） */
+  .gallery-cont img:hover {
+    transform: scale(1.02);
+  }
+
+  /* footer：読みやすく */
+  #footer {
+    font-size: .75rem;
+    height: 8rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+}
