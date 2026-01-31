@@ -274,7 +274,6 @@ section {
         justify-items: center;
         align-items: center;
         height: 24rem;
-        row-gap: 1rem;
         padding: 1.5rem 0 0;
         max-width: 100%;
     }
@@ -288,7 +287,7 @@ section {
     #catch-copy {
         grid-column: 1;
         writing-mode: horizontal-tb;
-        margin-top: 0;
+        margin-top: -10rem;
         padding-right: 0;
         text-align: center;
         font-size: .9rem;
