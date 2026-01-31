@@ -16,4 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const partmoveElements = document.querySelectorAll('.partmove, .catchmove');
     partmoveElements.forEach(el => observer.observe(el));
+
+    document.querySelectorAll('#nav a').forEach(a=>{
+        a.addEventListener('click',()=>{
+            a.classList.add('tapflash');
+            setTimeout(()=>a.classList.remove('tapflash'),600);
+        });
+    });
 });

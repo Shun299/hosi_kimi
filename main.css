@@ -266,7 +266,7 @@ section {
         text-shadow: none;
     }
 
-    #nav a:active {
+    #nav a.tapflash {
         text-shadow: 0 0 20px #fff,0 0 20px #fff,0 0 20px #fff;
         color: var(--bg-color);
     }
