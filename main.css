@@ -229,19 +229,18 @@ section {
 @media (max-width: 768px) {
 
     html, body {
-    overflow-x: hidden;
+        overflow-x: hidden;
     }
 
-  /* 全体：余白を少し詰める */
-  section {
-    padding: 3.5rem 1rem;
-    max-width: 50rem;
-    margin: 0 auto;
+    section {
+        padding: 3.5rem 1rem;
+        max-width: 50rem;
+        margin: 0 auto;
     }
 
-  /* ナビ：詰めて折り返し許可（スマホで潰れにくく） */
     #nav {
         position: fixed;          /* スクロールでも使いやすく */
+        z-index: 100;
         top: 0;
         left: 0;
         height: auto;
@@ -261,17 +260,14 @@ section {
         letter-spacing: .06rem;
     }
 
-  /* fixedナビ分だけ、最初の見え方を調整 */
     body {
         padding-top: 3rem;
     }
 
-  /* TOP：高さを縮める */
     #top {
         height: 24rem;
     }
 
-  /* ヘッダー：3カラム → 縦積み */
     #header {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -279,7 +275,7 @@ section {
         align-items: center;
         height: 24rem;
         row-gap: 1rem;
-        padding: 1.5rem 1rem 0;
+        padding: 1.5rem 0 0;
         max-width: 100%;
     }
 
@@ -289,14 +285,13 @@ section {
         max-width: 100%;
     }
 
-  /* キャッチ：縦書き → 横書き＆中央寄せ */
     #catch-copy {
         grid-column: 1;
         writing-mode: horizontal-tb;
         margin-top: 0;
         padding-right: 0;
         text-align: center;
-        font-size: 1.05rem;
+        font-size: .9rem;
         letter-spacing: .25rem;
         line-height: 1.8;
         text-shadow: 0 0 8px rgba(255,255,255,0.8);
@@ -308,20 +303,17 @@ section {
         margin-top: 0;
     }
 
-  /* 見出し：少し小さく */
     .part h2 {
         font-size: 2rem;
         letter-spacing: .22rem;
     }
 
-  /* STORY：行間と余白調整 */
     #story-sentence {
         margin-top: 2.2rem;
         line-height: 2.2;
         letter-spacing: .06rem;
     }
 
-  /* CHARACTER：余白を詰める */
     #chara-box {
         gap: 2.2rem;
     }
@@ -335,13 +327,12 @@ section {
     }
 
     .chara-name-en {
-        display: block;     /* 1行に詰め込まず折り返しやすく */
+        display: block;
         margin-left: 0;
         margin-top: .25rem;
         font-size: .95rem;
     }
 
-  /* WORLD：横並び → 縦並び */
     #world-box {
         flex-direction: column;
         gap: 2rem;
@@ -351,7 +342,6 @@ section {
         font-size: 1.25rem;
     }
 
-  /* GALLERY：余白調整 */
     #gallery-box {
         margin-top: 2.2rem;
     }
@@ -361,12 +351,10 @@ section {
         border-radius: .35rem;
     }
 
-  /* hoverはスマホだと誤発火しやすいので控えめに（任意） */
     .gallery-cont img:hover {
         transform: scale(1.02);
     }
 
-  /* footer：読みやすく */
     #footer {
         font-size: .75rem;
         height: 8rem;
