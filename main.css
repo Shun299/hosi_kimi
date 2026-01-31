@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #05050a;
+    --text-color: #dbdbdb;
+    --accent-purple: #4b4b7a;
+    --accent-gold: #fff9c4;
+    --font-jp: 'Kaisei Opti', serif;
+    --font-en: 'Cormorant Garamond', serif;
+}
+/* rgba(7, 0, 100, 0.744) 85% */
+
+body {
+    background: linear-gradient(
+        var(--bg-color) 0%,
+        var(--bg-color) 70%,
+        rgb(66, 60, 148) 85%,
+        rgb(220, 126, 48) 100%
+    );
+    color: var(--text-color);
+    font-family: var(--font-jp);
+    line-height: 1.8;
+}
+
+section {
+    padding: 6.25rem 1.25rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+#nav a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-en);
+    letter-spacing: .1rem;
+    transition: .25s;
+}
+
+#nav a:hover {
+    text-shadow: 0 0 20px #fff,0 0 20px #fff,0 0 20px #fff;
+    color: var(--bg-color);
+}
+
+#nav {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+        var(--bg-color)0,
+        rgba(0, 0, 0, 0.5)50%,
+        rgba(0, 0, 0, 0)100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 2.5rem;
+}
+
+/* ここからは、top */
+
+#top{
+    background: linear-gradient(rgba(0,0,0,0.2), var(--bg-color)), url('key_vis.jpg') center/cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 30rem;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 30rem;
+}
+
+#header img{
+    grid-column: 2;
+    height: 14rem;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+
+#catch-copy {
+    grid-column: 3;
+    letter-spacing: .5rem;
+    writing-mode: vertical-rl;
+    margin-top: 2rem;
+    padding-right: 5rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #fff;
+}
+
+#catch-copy span {
+    display: block;
+    margin-top: 15rem;
+}
+
+/* ここからは、STORY */
+
+.part h2 {
+    text-align: center;
+    font-family: var(--font-en);
+    color: var(--accent-purple);
+    font-size: 2.5rem;
+    letter-spacing: .35rem;
+}
+
+#story-sentence {
+    text-align: center;
+    margin-top: 4rem;
+    letter-spacing: .1rem;
+    line-height: 2.5;
+}
+
+/* ここからは、CHARACTER */
+
+#chara-box {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.chara-container {
+    border-left: 1px solid var(--accent-purple);
+    padding-left: 2rem;
+}
+
+.chara-name {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+}
+
+.chara-name-en {
+    font-size: 1rem;
+    font-family: var(--font-en);
+    margin-left: 1rem;
+    letter-spacing: .1rem;
+}
+
+/* ここからはWORLD */
+
+#world-box {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+}
+
+.world-name {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+}
+
+.world-sentence {
+    margin-top: .5rem;
+}
+
+/* ここからは、GALLERY */
+
+#gallery-box {
+    margin-top: 4rem;
+}
+
+.gallery-cont img {
+    max-width: 100%;
+    margin-bottom: 4rem;
+    border-radius: .3rem;
+    transform: scale(1);
+    transition: transform .7s;
+}
+
+.gallery-cont img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-cont h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--accent-gold);
+    letter-spacing: .1rem;
+}
+
+/* ここからはfooter */
+
+#footer {
+    color: var(--text-color);
+    display: flex;
+    font-size: .8rem;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+/* ここからは、Intersection Observer */
+
+.partmove {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.partmove.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.catchmove {
+    opacity: 0;
+    transition: opacity 3s ease-out;
+}
+
+.catchmove.active {
+    opacity: 1;
+}
+
+/* スマホ対応 */
+
+@media (max-width: 768px) {}
