@@ -260,6 +260,16 @@ section {
         letter-spacing: .06rem;
     }
 
+    #nav a:hover {
+        color: var(--text-color);
+        text-shadow: none;
+    }
+
+    #nav a:active {
+        text-shadow: 0 0 20px #fff,0 0 20px #fff,0 0 20px #fff;
+        color: var(--bg-color);
+    }
+
     body {
         padding-top: 3rem;
     }
@@ -348,10 +358,7 @@ section {
     .gallery-cont img {
         margin-bottom: 2.5rem;
         border-radius: .35rem;
-    }
-
-    .gallery-cont img:hover {
-        transform: scale(1.02);
+        pointer-events: none;
     }
 
     #footer {
