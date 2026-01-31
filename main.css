@@ -258,6 +258,7 @@ section {
     #nav a {
         font-size: .95rem;
         letter-spacing: .06rem;
+        transition: 2s;
     }
 
     #nav a:hover {
