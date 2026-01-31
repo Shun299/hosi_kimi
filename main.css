@@ -222,7 +222,9 @@ section {
     opacity: 1;
 }
 
+
 /* スマホ対応 */
+
 
 @media (max-width: 768px) {
 
@@ -267,10 +269,10 @@ section {
   /* TOP：高さを縮める */
     #top {
         height: 24rem;
-    };
+    }
 
   /* ヘッダー：3カラム → 縦積み */
-  #header {
+    #header {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         justify-items: center;
@@ -278,11 +280,13 @@ section {
         height: 24rem;
         row-gap: 1rem;
         padding: 1.5rem 1rem 0;
+        max-width: 100%;
     }
 
     #header img {
         grid-column: 1;
-        height: 9.5rem;
+        height: auto;
+        max-width: 100%;
     }
 
   /* キャッチ：縦書き → 横書き＆中央寄せ */
@@ -296,6 +300,7 @@ section {
         letter-spacing: .25rem;
         line-height: 1.8;
         text-shadow: 0 0 8px rgba(255,255,255,0.8);
+        max-width: 100%;
     }
 
     #catch-copy span {
