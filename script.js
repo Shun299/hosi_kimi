@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#nav a').forEach(a=>{
         a.addEventListener('click',()=>{
             a.classList.add('tapflash');
-            setTimeout(()=>a.classList.remove('tapflash'),600);
+            setTimeout(()=>a.classList.remove('tapflash'),450);
         });
     });
 });
