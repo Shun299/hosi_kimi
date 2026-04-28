@@ -67,7 +67,7 @@ section {
 /* ここからは、top */
 
 #top{
-    background: linear-gradient(rgba(0,0,0,0.2), var(--bg-color)), url('key_vis.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.2), var(--bg-color)), url('../images/key_vis.jpg') center/cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
